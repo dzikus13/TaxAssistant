@@ -5,6 +5,7 @@ from django.db import models
 
 class Session(models.Model):
     user_id = models.UUIDField()
+    topic = models.CharField(max_length=100, null=True, blank=True)
     created_at = models.DateTimeField(auto_created=True)
     updated_at = models.DateTimeField(auto_now=True)
 

@@ -5,6 +5,10 @@ import os
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
 
 
+class StopSessionException(BaseException):
+    pass
+
+
 class OpenAIConnector:
     def __init__(self, system_prompt: str):
         self.client = OpenAI(api_key=OPENAI_API_KEY)
