@@ -47,10 +47,30 @@ class OpenAIConnector:
             temperature=self.temperature,
             top_p=self.top_p,
             response_format="json_object"
+
+            tools=[
+                {
+                    "type": "function",
+                    "function": {
+                        "name": "stop_chat",
+                        "description": "Use this function when the user is talking about a topic unrelated to taxes",
+                        "parameters": {
+                            "type": "object",
+                            "properties": {},
+                            "additionalProperties": False,
+                            "required": []
+                        },
+                        "strict": True
+                    }
+                }
+            ],
+            parallel_tool_calls=true,
         )
-        
+
         if response.choices[0].finish_reason == "tool_calls":
-            raise StopSessionException("Chat session has been ended")
+            function_name = response.choices[0].message.tool_calls[0].function.name
+            if function_name == "stop_chat":
+                raise StopSessionException("Chat session has been ended")
 
         return response
     
