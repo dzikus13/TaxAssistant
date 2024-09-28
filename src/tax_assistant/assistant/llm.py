@@ -50,6 +50,10 @@ class OpenAIConnector:
             top_p=self.top_p,
             response_format={"type": "json_object"}   #r esponse_format
         )
+        
+        if response.choices[0].finish_reason == "tool_calls":
+            raise StopSessionException("Chat session has been ended")
+
         message = response.choices[0].message.content
         return message
     
