@@ -42,17 +42,35 @@ class OpenAIConnector:
 
     def get_gpt_response(self, user_prompt, history):
         messages = self.build_messages(user_prompt, history)
-        print(messages)
         response = self.client.chat.completions.create(
             model=self.LLM_MODEL,
             messages=messages,
             temperature=self.temperature,
             top_p=self.top_p,
-            response_format={"type": "json_object"}   #r esponse_format
+            response_format={"type": "json_object"}, 
+            tools=[
+                {
+                    "type": "function",
+                    "function": {
+                        "name": "stop_chat",
+                        "description": "Use this function when the user is talking about a topic unrelated to taxes",
+                        "parameters": {
+                            "type": "object",
+                            "properties": {},
+                            "additionalProperties": False,
+                            "required": []
+                        },
+                        "strict": True
+                    }
+                }
+            ],
+            parallel_tool_calls=True,
         )
-        
+
         if response.choices[0].finish_reason == "tool_calls":
-            raise StopSessionException("Chat session has been ended")
+            function_name = response.choices[0].message.tool_calls[0].function.name
+            if function_name == "stop_chat":
+                raise StopSessionException("Chat session has been ended")
 
         message = response.choices[0].message.content
         return message

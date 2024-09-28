@@ -1,0 +1,48 @@
+{
+    "P1": {
+        "name": "Identyfikator podatkowy NIP / numer PESEL. Nip dla osoby prywatnej, NIP dla firmy"
+    },
+    "P4": {
+        "name": "Data dokonania czynności (dzień - miesiąc - rok)"
+    },
+    "P5": {
+        "name": "Kod urzędu skarbowego"
+    },
+    "P9": {
+        "name": "Nazwisko, Imie"
+    },
+    "P11": {
+        "name": "Kraj"
+    },
+    "P12": {
+        "name": "Województwo"
+    },
+    "P13": {
+        "name": "Powiat"
+    },
+    "P14": {
+        "name": "Gmina"
+    },
+    "P15": {
+        "name": "Ulica"
+    },
+    "P16": {
+        "name": "Nr domu"
+    },
+    "P17": {
+        "name": "Nr lokalu",
+        "required": false
+    },
+    "P18": {
+        "name": "Miejscowość"
+    },
+    "P19": {
+        "name": "Kod pocztowy"
+    },
+    "P23": {
+        "name": "Zwięzłe określenie treści i przedmiotu czynności cywilnoprawnej ( opisujemy samochód, podając takie dane jak: marka i model samochodu, jego rok produkcji, pojemność silnika, numer rejestracyjny, numer nadwozia, przebieg, rodzaj paliwa oraz, jeśli auto takowe ma, uszkodzenia)"
+    },
+    "P26": {
+        "name": "Suma sprzedaży"
+    }
+}
