@@ -35,7 +35,7 @@ class ContextDocument(models.Model):
     content = models.TextField()
     valid_till = models.DateField(null=True)
 
-    created_at = models.DateTimeField(auto_created=True)
+    created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
@@ -45,7 +45,7 @@ class ContextDocument(models.Model):
 class TaxFormValidation(models.Model):
     tax_form = models.ForeignKey(TaxForm, on_delete=models.SET_NULL, null=True)
     xsd = models.TextField()
-    created_at = models.DateTimeField(auto_created=True)
+    created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     valid_till = models.DateField(null=True)
@@ -62,7 +62,7 @@ class TaxFormInstance(models.Model):
     xml = models.TextField()
     status = models.CharField(
         max_length=20, choices=[(i[0], i[1]) for i in TAX_FORM_STATUS])
-    created_at = models.DateTimeField(auto_created=True)
+    created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     source_interaction = models.ForeignKey(
         Interaction, on_delete=models.SET_NULL, null=True)

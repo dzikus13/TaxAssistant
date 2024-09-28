@@ -1,2 +1,4 @@
 django
 lxml
+requests
+django_rest_framework

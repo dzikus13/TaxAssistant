@@ -1,10 +1,10 @@
 from lxml import etree
-from io import StringIO
+from io import BytesIO
 
 
-def validate(xml: str, xsd: str, silent=True) -> bool:
-    doc = etree.parse(StringIO(xml))
-    schema_doc = etree.parse(StringIO(xsd))
+def validate(xml: str, xsd: str, silent: bool = True) -> bool:
+    doc = etree.parse(BytesIO(bytes(xml, encoding="UTF-8")))
+    schema_doc = etree.parse(BytesIO(bytes(xsd, encoding="UTF-8")))
     schema = etree.XMLSchema(schema_doc)
     if silent:
         return schema.validate(doc)
