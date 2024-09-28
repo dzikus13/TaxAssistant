@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'assistant',
-    'xml_generator'
+    'xml_generator',
+    'teryt'
 ]
 
 MIDDLEWARE = [
