@@ -43,6 +43,23 @@
         "name": "Zwięzłe określenie treści i przedmiotu czynności cywilnoprawnej ( opisujemy samochód, podając takie dane jak: marka i model samochodu, jego rok produkcji, pojemność silnika, numer rejestracyjny, numer nadwozia, przebieg, rodzaj paliwa oraz, jeśli auto takowe ma, uszkodzenia)"
     },
     "P26": {
-        "name": "Suma sprzedaży"
+        "name": "Suma sprzedaży",
+        "type": "calculated",
+        "rule": "=ROUND(P26, 0) O ILE P26>=1000"
+    },
+    "P27": {
+        "name": "Suma opodatkowania",
+        "type": "calculated",
+        "rule": "=ROUND(P26*2%, 0)"
+    },
+    "P46": {
+        "name": "Kwota należnego podatku",
+        "type": "calculated",
+        "rule": "=P27"
+    },
+    "P53": {
+        "name": "Kwota należnego podatku",
+        "type": "calculated",
+        "rule": "=ROUND(P46, 0)"
     }
 }
