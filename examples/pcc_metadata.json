@@ -1,79 +1,96 @@
 {
     "P1": {
-        "name_en": "Tax Identifier NIP / PESEL number. PESEL for a private person, NIP dfor a firm",
-		"name_pl": "Identyfikator podatkowy NIP / numer PESEL. Nip dla osoby prywatnej, NIP dla firmy"
+        "name_en": "Tax Identifier NIP / PESEL number. PESEL for a private person, NIP for a firm",
+        "name_pl": "Identyfikator podatkowy NIP / numer PESEL. Nip dla osoby prywatnej, NIP dla firmy",
+        "name_ua": "Податковий ідентифікатор NIP / номер PESEL. PESEL для приватної особи, NIP для фірми"
     },
     "P4": {
         "name_en": "THe date of activity execution (day - month - year)",
-		"name_pl": "Data dokonania czynności (dzień - miesiąc - rok)"
+		"name_pl": "Data dokonania czynności (dzień - miesiąc - rok)",
+        "name_ua": "Дата виконання діяльності (день - місяць - рік)"
     },
     "P5": {
         "name_em": "Tax office code",
 		"name_pl": "Kod urzędu skarbowego",
+        "name_ua": "Код податкової служби",
         "calculated": true,
         "type": "e-pity"
     },
     "P9_1": {
         "name_en": "Surname",
-		"name_pl": "Nazwisko"
+		"name_pl": "Nazwisko",
+        "name_ua": "Прізвище"
     },
-	"P9_2":{
-		"name_en": "Name",
-		"name_pl": "Imię"
-	},
-	"P9_3":{
-		"name_en": "Date of birth",
-		"name_pl": "Data urodzenia"
-	},
+	"P9_2": {
+        "name_en": "Name",
+        "name_pl": "Imię",
+        "name_ua": "Ім'я"
+    },
+    "P9_3": {
+        "name_en": "Date of birth",
+        "name_pl": "Data urodzenia",
+        "name_ua": "Дата народження"
+    },
     "P11": {
         "name_en": "Country",
-		"name_pl": "Kraj"
+        "name_pl": "Kraj",
+        "name_ua": "Країна"
     },
     "P12": {
         "name_en": "Voivodeship",
-		"name_pl": "Województwo"
+        "name_pl": "Województwo",
+        "name_ua": "Воєводство"
     },
     "P13": {
         "name_en": "County",
-		"name_pl": "Powiat"
+        "name_pl": "Powiat",
+        "name_ua": "Повіт"
     },
     "P14": {
         "name_en": "Municipality",
-		"name_pl": "Gmina"
+        "name_pl": "Gmina",
+        "name_ua": "Гміна"
     },
     "P15": {
         "name_en": "Street",
-		"name_pl": "Ulica"
+        "name_pl": "Ulica",
+        "name_ua": "Вулиця"
     },
     "P16": {
         "name_en": "House No.",
-		"name_pl": "Numer domu"
+        "name_pl": "Numer domu",
+        "name_ua": "Номер будинку"
     },
     "P17": {
         "name_en": "Apartment No.",
-		"name_pl": "Numer lokalu",
+        "name_pl": "Numer lokalu",
+        "name_ua": "Номер квартири",
         "required": false
     },
     "P18": {
         "name_en": "Locality",
-		"name_pl": "Miejscowość"
+		"name_pl": "Miejscowość",
+        "name_ua": "Місцевість"
     },
     "P19": {
         "name_en": "Post code",
-		"name_pl": "Kod pocztowy"
+		"name_pl": "Kod pocztowy",
+        "name_ua": "Поштовий код"
     },
     "P23": {
 		"name_en": "Brief description of the content and subject of a civil law action (we are describing a car, using data as: make and model of a car, year of production, engine size, registration number, chasis number, mileage, type of fuel, and if present, damages",
-        "name_pl": "Zwięzłe określenie treści i przedmiotu czynności cywilnoprawnej ( opisujemy samochód, podając takie dane jak: marka i model samochodu, jego rok produkcji, pojemność silnika, numer rejestracyjny, numer nadwozia, przebieg, rodzaj paliwa oraz, jeśli auto takowe ma, uszkodzenia)"
-		
+        "name_pl": "Zwięzłe określenie treści i przedmiotu czynności cywilnoprawnej ( opisujemy samochód, podając takie dane jak: marka i model samochodu, jego rok produkcji, pojemność silnika, numer rejestracyjny, numer nadwozia, przebieg, rodzaj paliwa oraz, jeśli auto takowe ma, uszkodzenia)",
+		"name_ua": "Стислий опис змісту та предмету цивільно-правової дії (опис автомобіля, використовуючи такі дані як: марка та модель автомобіля, рік виробництва, об'єм двигуна, реєстраційний номер, номер шасі, пробіг, тип палива та, у разі наявності, пошкодження)"
     },
     "P26": {
 		"name_en": "Total sales",
-        "name_pl": "Suma sprzedaży"
+        "name_pl": "Suma sprzedaży",
+        "name_ua": "Сума продажі"
     },
     "P27": {
 		"name_en": "tax due",
         "name_pl": "Podatek należny",
+        "name_ua": "Податок до сплати",
         "calculated": true,
         "variable": "P26",
         "factor": 0.02
@@ -82,6 +99,7 @@
     "P46": {
 		"name_en": "Amount of tax due",
         "name_pl": "Kwota należnego podatku",
+        "name_ua": "Сума податку до сплати",
         "type": "additive",
         "calculated": true,
         "variables": ["P27"]
@@ -89,13 +107,15 @@
     "P53": {
 		"name_en": "Amount of tax due",
         "name_pl": "Kwota należnego podatku",
+        "name_ua": "Сума податку до сплати",
         "type": "additive",
         "calculated": true,
         "variables": ["P46"]
     },
 	"P62": {
 		"name_en": "Number of attached PCC-3/A forms (Number of additional people with whom you purchased the car)",
-		"name_pl": " Liczba dołączonych załączników PCC-3/A (Liczba dodatkowych osób z któymi kupowałeś samochód)"
+		"name_pl": " Liczba dołączonych załączników PCC-3/A (Liczba dodatkowych osób z któymi kupowałeś samochód)",
+        "name_ua": "Кількість доданих форм PCC-3/A (Кількість додаткових осіб, з якими ви купили автомобіль)"
 	}
 
 }
