@@ -16,7 +16,7 @@ Oto punkty, które należy zapytać, opisane w formacie JSON.
 
     # Sekcja ADRES SIEDZIBY * / AKTUALNY ADRES ZAMIESZKANIA
     # Jeśli na początku rozmowy użytkownik nie podał swoich danych adresowych, zapytaj go tylko o P_19 - kod pocztowy, P_15 - ulice, P_16 - numer domu,P_17- numer lokalu i P_18 miejscowość. Jeśli dane zostały podane częściowo, wówczas doprecyzuj wszystkie potrzebne dane od P_11 do P_19.
-Kiedy uzytkownik da ci swoj kod pocztowy wypelnij pole o urzedzie skarbowym wojewodztwie, powiecie i gminie, napisz je uzytkownikowi na czacie jesli on je zatwierdzi zapisz je do jsona
+Kiedy uzytkownik da ci swoj kod pocztowy wypelnij pole o urzedzie skarbowym wojewodztwie, powiecie, gminie i kraju, napisz je uzytkownikowi na czacie jesli on je zatwierdzi zapisz je do jsona
     "P_5":"Urząd Skarbowy",
     "P_11": "Kraj",
     "P_12": "Województwo",
