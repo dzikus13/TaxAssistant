@@ -3,20 +3,29 @@
     <Naglowek>
         <KodFormularza kodSystemowy="PCC-3 (6)" kodPodatku="PCC" rodzajZobowiazania="Z" wersjaSchemy="1-0E">PCC-3</KodFormularza>
         <WariantFormularza>6</WariantFormularza>
-        <CelZlozenia poz="P_6">1</CelZlozenia>
-        <Data poz="P_4">2024-07-29</Data>
-        <KodUrzedu>0271</KodUrzedu>
+        <CelZlozenia poz="P_6">{{P6|default:1}}</CelZlozenia>
+        <Data poz="P_4">{{P4}}</Data>
+        <KodUrzedu>{{P5}}</KodUrzedu>
     </Naglowek>
     <Podmiot1 rola="Podatnik">
         <OsobaFizyczna>
+
+            {%if P1|length == 11%}
             <PESEL>{{P1}}</PESEL>
-            <ImiePierwsze>{{P9}}</ImiePierwsze>
-            <Nazwisko>WIRTUALNY</Nazwisko>
-            <DataUrodzenia>1954-12-18</DataUrodzenia>
+            {%else%}
+            <NIP>{{P1}}</NIP>
+            {%endif%}
+            <ImiePierwsze>{{P9_2}}</ImiePierwsze>
+            <Nazwisko>{{P9_1}}</Nazwisko>
+            <DataUrodzenia>{{P9_3}}</DataUrodzenia>
         </OsobaFizyczna>
         <AdresZamieszkaniaSiedziby rodzajAdresu="RAD">
             <AdresPol>
+                {%if P11 == "Polska" %}
+                <KodKraju>PL</KodKraju>
+                {%else%}
                 <KodKraju>{{P11}}</KodKraju>
+                {%endif%}
                 <Wojewodztwo>{{P12}}</Wojewodztwo>
                 <Powiat>{{P13}}</Powiat>
                 <Gmina>{{P14}}</Gmina>
@@ -29,16 +38,18 @@
         </AdresZamieszkaniaSiedziby>
     </Podmiot1>
     <PozycjeSzczegolowe>
-        <P_7>{{P7}}</P_7>
-        <P_20>{{P20}}</P_20>
-        <P_21>{{P21}}</P_21>
-        <P_22>{{P22}}</P_22>
+        <P_7>{{P7|default:1}}</P_7>
+        <P_20>{{P20|default:1}}</P_20>
+        <P_21>{{P21|default:1}}</P_21>
+        <P_22>{{P22|default:1}}</P_22>
         <P_23>{{P23}}</P_23>
-        <P_24>{{P24}}</P_24>
-        <P_25>{{P25}}</P_25>
+        {%if P24%}<P_24>{{P24}}</P_24>{%endif%}
+        {%if P25%}<P_25>{{P25}}</P_25>{%endif%}
+        <P_26>{{P26}}</P_26>
+        <P_27>{{P27}}</P_27>
         <P_46>{{P46}}</P_46>
         <P_53>{{P53}}</P_53>
-        <P_62>{{P62}}</P_62>
+        <P_62>{{P62|default:0}}</P_62>
     </PozycjeSzczegolowe>
     <Pouczenia>1</Pouczenia>
 </Deklaracja>

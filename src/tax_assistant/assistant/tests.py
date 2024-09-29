@@ -87,7 +87,6 @@ class AssistantTestFullCase(TestCase):
 
     def test_process_mip(self):
         tf = TaxForm.objects.get(name="PCC-3")
-        print("TF", tf.schema)
         prompt = {
             "session_id": "5b841485-2a7d-4584-b290-b8a213561f7f",
             "prompt": "Kupiłem samochód i potrzebuję pomocy z dokumentami"
