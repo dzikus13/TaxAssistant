@@ -101,7 +101,7 @@ class AssistantTestFullCase(TestCase):
 
         prompt = {
             "session_id": "5b841485-2a7d-4584-b290-b8a213561f7f",
-            "prompt": "Mój nio to 1226049369 a adres tp Pabla Nerudy 6 m 35, 01-926 Warszawa, WArtość samochodu to 10000. NAzywam się Kamil Testowy i urodziłem się 26 czerwca 1977. Samochód kupiłem 26 września. Kupiony samochód to Tpyota camry z 2014 roku WPL 23455 o pojemnośic 2333cc. Kod urzędu skarbowego to 1134 "
+            "prompt": "Mój nio to 1226049369 a adres tp Pabla Nerudy 6 m 35, 01-926 Warszawa, WArtość samochodu to 10000. NAzywam się Kamil Testowy. Samochód samodzielnie kupiłem 26 września. Kupiony samochód to Tpyota camry z 2014 roku WPL 23455 o pojemnośic 2333cc."
         }
         response = self.client.post("/api/v1/assistant/process_input/",
                                     json.dumps(prompt),

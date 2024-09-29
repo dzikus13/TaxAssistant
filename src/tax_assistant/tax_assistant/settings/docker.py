@@ -6,7 +6,7 @@ DATABASES = {
         'NAME': 'assistant',
         'USER': 'assistant',
         'PASSWORD': 'TaxAssistant123',
-        'HOST': 'host.docker.internal',
+        'HOST': 'postgres',
         'PORT': '5432',
     }
 }
