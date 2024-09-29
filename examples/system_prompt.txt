@@ -42,5 +42,7 @@ Zawsze odpowiadaj w formacie json zgodnie z poniższym wzorem. Nie wysyłaj do s
             // PN key, where N is a number of P
             "PN": "user's answer"
         }
-    ]
+    ],
+    "is_chat_ended": True/Flase
+    // is_chat_ended - True jeśli użytkownik dostarczył wszystkie niezbędne dane potrzebne do wypełnienia deklaracji
 }
