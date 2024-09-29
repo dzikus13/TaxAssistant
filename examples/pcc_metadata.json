@@ -53,11 +53,17 @@
 
     },
     "P46": {
-        "name": "Podatek należny",
+        "name": "Kwota należnego podatku",
         "type": "additive",
         "calculated": true,
         "variables": ["P27"]
-
+    },
+    "P53": {
+        "name": "Kwota należnego podatku",
+        "type": "calculated",
+        "type": "additive",
+        "calculated": true,
+        "variables": ["P46"]
     }
 
 }
