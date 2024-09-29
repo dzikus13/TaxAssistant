@@ -44,5 +44,20 @@
     },
     "P26": {
         "name": "Suma sprzedaży"
+    },
+    "P27": {
+        "name": "Podatek należny",
+        "calculated": true,
+        "variable": "P26",
+        "factor": 0.02
+
+    },
+    "P46": {
+        "name": "Podatek należny",
+        "type": "additive",
+        "calculated": true,
+        "variables": ["P27"]
+
     }
+
 }
