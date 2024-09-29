@@ -1,0 +1,102 @@
+{
+    "P1": {
+        "name_en": "Tax Identifier NIP / PESEL number. PESEL for a private person, NIP dfor a firm",
+		"name_pl": "Identyfikator podatkowy NIP / numer PESEL. Nip dla osoby prywatnej, NIP dla firmy"
+    },
+    "P4": {
+        "name_en": "THe date of activity execution (day - month - year)",
+		"name_pl": "Data dokonania czynności (dzień - miesiąc - rok)"
+    },
+    "P5": {
+        "name_em": "Tax office code",
+		"name_pl": "Kod urzędu skarbowego"
+        "calculated": true,
+        "type": "e-pity"
+    },
+    "P9_1": {
+        "name_en": "Surname",
+		"name_pl": "Nazwisko"
+    },
+	"P9_2":{
+		"name_en": "Name",
+		"name_pl": "Imię"
+	},
+	"P9_3":{
+		"name_en": "Date of birth",
+		"name_pl": "Data urodzenia"
+	},
+    "P11": {
+        "name_en": "Country",
+		"name_pl": "Kraj"
+    },
+    "P12": {
+        "name_en": "Voivodeship",
+		"name_pl": "Województwo"
+    },
+    "P13": {
+        "name_en": "County",
+		"name_pl": "Powiat"
+    },
+    "P14": {
+        "name_en": "Municipality",
+		"name_pl": "Gmina"
+    },
+    "P15": {
+        "name_en": "Street",
+		"name_pl": "Ulica"
+    },
+    "P16": {
+        "name_en": "House No.",
+		"name_pl": "Numer domu"
+    },
+    "P17": {
+        "name_en": "Apartment No.",
+		"name_pl": "Numer lokalu",
+        "required": false
+    },
+    "P18": {
+        "name_en": "Locality",
+		"name_pl": "Miejscowość"
+    },
+    "P19": {
+        "name_en": "Post code",
+		"name_pl": "Kod pocztowy"
+    },
+    "P23": {
+		"name_en": "Brief description of the content and subject of a civil law action (we are describing a car, using data as: make and model of a car, year of production, engine size, registration number, chasis number, mileage, type of fuel, and if present, damages",
+        "name_pl": "Zwięzłe określenie treści i przedmiotu czynności cywilnoprawnej ( opisujemy samochód, podając takie dane jak: marka i model samochodu, jego rok produkcji, pojemność silnika, numer rejestracyjny, numer nadwozia, przebieg, rodzaj paliwa oraz, jeśli auto takowe ma, uszkodzenia)"
+		
+    },
+    "P26": {
+		"name_en": "Total sales",
+        "name_pl": "Suma sprzedaży"
+    },
+    "P27": {
+		"name_en": "tax due",
+        "name_pl": "Podatek należny",
+        "calculated": true,
+        "variable": "P26",
+        "factor": 0.02
+
+    },
+    "P46": {
+		"name_en": "Amount of tax due"
+        "name_pl": "Kwota należnego podatku",
+        "type": "additive",
+        "calculated": true,
+        "variables": ["P27"]
+    },
+    "P53": {
+		"name_en": "Amount of tax due",
+        "name_pl": "Kwota należnego podatku",
+        "type": "calculated",
+        "type": "additive",
+        "calculated": true,
+        "variables": ["P46"]
+    },
+	"P62": {
+		"name_en": "Number of attached PCC-3/A forms (Number of additional people with whom you purchased the car)",
+		"name_pl": " Liczba dołączonych załączników PCC-3/A (Liczba dodatkowych osób z któymi kupowałeś samochód)"
+	}
+
+}
