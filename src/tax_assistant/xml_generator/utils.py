@@ -1,5 +1,6 @@
 from lxml import etree
 from io import BytesIO
+from django.template import Template, Context
 
 
 def validate(xml: str, xsd: str, silent: bool = True) -> bool:
@@ -10,3 +11,14 @@ def validate(xml: str, xsd: str, silent: bool = True) -> bool:
         return schema.validate(doc)
     else:
         return schema.assertValid(doc)
+
+
+def generate_xml(template, context: dict):
+    xml_template = Template(template)
+    ctx = Context(context)
+    xml = xml_template.render(ctx)
+
+    return xml
+
+
+

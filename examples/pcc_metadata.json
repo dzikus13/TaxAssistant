@@ -6,7 +6,9 @@
         "name": "Data dokonania czynności (dzień - miesiąc - rok)"
     },
     "P5": {
-        "name": "Kod urzędu skarbowego"
+        "name": "Kod urzędu skarbowego",
+        "calculated": true,
+        "type": "e-pity"
     },
     "P9": {
         "name": "Nazwisko, Imie"

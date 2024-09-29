@@ -120,10 +120,10 @@ class JednostkaAdministracyjna(CommonInfo):
         2: 'WOJ',
     }
 
-    id = models.CharField(max_length=7, primary_key=True)
+    id = models.CharField(max_length=20, primary_key=True)
     nazwa = models.CharField(max_length=50)
     nazwa_dod = models.CharField(max_length=50)
-    typ = models.CharField(max_length=3)
+    typ = models.CharField(max_length=20)
 
     woj = models.CharField(max_length=10, null=True)
     pow = models.CharField(max_length=10, null=True)
@@ -153,10 +153,10 @@ class JednostkaAdministracyjna(CommonInfo):
         self.nazwa = d['NAZWA']
         self.nazwa_dod = d['NAZWA_DOD']
         self.stan_na = d['STAN_NA']
-        woj = d.get("WOJ")
-        pow = d.get("POW")
-        gmi = d.get("GMI")
-        rodz = d.get("RODZ")
+        self.woj = d.get("WOJ")
+        self.pow = d.get("POW")
+        self.gmi = d.get("GMI")
+        self.rodz = d.get("RODZ")
         self.id = d['WOJ'] + xstr(d['POW']) + xstr(d['GMI']) + xstr(d['RODZ'])
 
         self.typ = self.LEN_TYPE[len(self.id)]

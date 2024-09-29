@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Deklaracja xmlns="http://crd.gov.pl/wzor/2023/12/13/13064/">
+    <Naglowek>
+        <KodFormularza kodSystemowy="PCC-3 (6)" kodPodatku="PCC" rodzajZobowiazania="Z" wersjaSchemy="1-0E">PCC-3</KodFormularza>
+        <WariantFormularza>6</WariantFormularza>
+        <CelZlozenia poz="P_6">1</CelZlozenia>
+        <Data poz="P_4">2024-07-29</Data>
+        <KodUrzedu>0271</KodUrzedu>
+    </Naglowek>
+    <Podmiot1 rola="Podatnik">
+        <OsobaFizyczna>
+            <PESEL>{{P1}}</PESEL>
+            <ImiePierwsze>{{P9}}</ImiePierwsze>
+            <Nazwisko>WIRTUALNY</Nazwisko>
+            <DataUrodzenia>1954-12-18</DataUrodzenia>
+        </OsobaFizyczna>
+        <AdresZamieszkaniaSiedziby rodzajAdresu="RAD">
+            <AdresPol>
+                <KodKraju>{{P11}}</KodKraju>
+                <Wojewodztwo>{{P12}}</Wojewodztwo>
+                <Powiat>{{P13}}</Powiat>
+                <Gmina>{{P14}}</Gmina>
+                <Ulica>{{P15}}</Ulica>
+                <NrDomu>{{P16}}</NrDomu>
+                {%if P17%}<NrLokalu>{{P17}}</NrLokalu>{%endif%}
+                <Miejscowosc>{{P18}}</Miejscowosc>
+                <KodPocztowy>{{P19}}</KodPocztowy>
+            </AdresPol>
+        </AdresZamieszkaniaSiedziby>
+    </Podmiot1>
+    <PozycjeSzczegolowe>
+        <P_7>{{P7}}</P_7>
+        <P_20>{{P20}}</P_20>
+        <P_21>{{P21}}</P_21>
+        <P_22>{{P22}}</P_22>
+        <P_23>{{P23}}</P_23>
+        <P_24>{{P24}}</P_24>
+        <P_25>{{P25}}</P_25>
+        <P_46>{{P46}}</P_46>
+        <P_53>{{P53}}</P_53>
+        <P_62>{{P62}}</P_62>
+    </PozycjeSzczegolowe>
+    <Pouczenia>1</Pouczenia>
+</Deklaracja>

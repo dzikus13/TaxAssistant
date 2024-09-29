@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-46foml9*_e7ze)km7e&1un^_!cccrf6@=qmd3tpp=y6vy(tf!&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["192.168.0.11", "localhost"]
 
 
 # Application definition
@@ -37,12 +37,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_extensions',
     'assistant',
     'xml_generator',
-    'teryt'
+    'teryt',
+    'corsheaders'
 ]
 
-MIDDLEWARE = [
+MIDDLEWARE = [ 
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -69,6 +72,13 @@ TEMPLATES = [
         },
     },
 ]
+
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:5173',
+]
+
+
+
 
 WSGI_APPLICATION = 'tax_assistant.wsgi.application'
 
