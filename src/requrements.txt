@@ -3,3 +3,5 @@ lxml
 requests
 django_rest_framework
 openai
+uwsgi
+django-cors-headers
