@@ -5,3 +5,5 @@ django_rest_framework
 openai
 uwsgi
 django-cors-headers
+django-extensions
+psycopg2-binary

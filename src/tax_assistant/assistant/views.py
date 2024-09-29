@@ -2,7 +2,7 @@
 import requests
 import json
 from django.shortcuts import render
-from django.http.response import JsonResponse
+from django.http.response import JsonResponse, HttpResponse
 from rest_framework.decorators import api_view, action, permission_classes
 from .llm import OpenAIConnector, StopSessionException
 from .models import Session, Interaction, SESSION_STATUS
@@ -101,3 +101,10 @@ def get_us_code(request):
             "error": str(e),
             "code": 400
         })
+
+@api_view(["GET"])
+def get_xml(request):
+    data = request.GET.get("session_id")
+    session = Session.objects.get(user_id=data)
+    doc = session.taxforminstance_set.all().last()
+    return HttpResponse(doc.xml, content_type="application/xml")

@@ -141,7 +141,9 @@ class TaxFormInstance(models.Model):
     data = models.JSONField(null=True, blank=True)
     xml = models.TextField(null=True, blank=True)
     status = models.CharField(
-        max_length=20, choices=[(name, descr) for name, descr in TAX_FORM_STATUS.items()])
+        max_length=20,
+        default="new",
+        choices=[(name, descr) for name, descr in TAX_FORM_STATUS.items()])
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     source = models.ForeignKey(
