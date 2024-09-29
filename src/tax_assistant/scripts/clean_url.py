@@ -8,16 +8,17 @@ def main(api_url):
     for filename in glob.glob(assets_dir+"/*.css"):
         with open(filename) as f:
             data = f.read()
-            data = data.replace("192.168.0.11", api_url)
+            data = data.replace("192.168.0.11:8000", api_url)
             with open(assets_dir+"index.css", "w") as w:
                 w.write(data)
 
     for filename in glob.glob(assets_dir+"/*.js"):
         with open(filename) as f:
             data = f.read()
-            data = data.replace("192.168.0.11", api_url)
+            data = data.replace("192.168.0.11:8000", api_url)
             with open(assets_dir+"index.js", "w") as w:
                 w.write(data)
+
 
 if __name__ == "__main__":
     argv = sys.argv

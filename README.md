@@ -42,7 +42,9 @@ Note: you can use alternafive virtualenv management tools
 
 `python scripts/clean_url.py localhost:8000`
 
-Go to: `localhost:8000` to see application or `localhost:8000/admin/` to login as superuser
+Run `python manage.py runserver` to run dev application. To fully use functionality the environment variable called OPENAI_API_KEY must be stt to access key for OpenAi api.
+
+Go to: `localhost:8000` to see application or `localhost:8000/admin/` to login as superuser. 
 
 
 ## Important configuration details
