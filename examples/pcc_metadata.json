@@ -29,7 +29,8 @@
     "P9_3": {
         "name_en": "Date of birth",
         "name_pl": "Data urodzenia",
-        "name_ua": "Дата народження"
+        "name_ua": "Дата народження",
+        "required": false
     },
     "P11": {
         "name_en": "Country",
