@@ -1,0 +1,17 @@
+{
+    "P_1": "Identyfikator podatkowy NIP / numer PESEL. PESEL dla osoby prywatnej, NIP dla firmy",
+    "P_4": " Data dokonania czynności (dzień - miesiąc - rok)",
+    "P_9": "Nazwisko, pierwsze imię z pesela data urodzenia",
+    "P_10": "Nazwa skrócona (dotyczy podatnika niebędącego osobą fizyczną) / Imię ojca, imię matki (dotyczy podatnika będącego osobą fizyczną) - (opcjonalnie)",
+    "P_11": "Kraj",
+    "P_12": "Województwo",
+    "P_13": "Powiat",
+    "P_14": "Gmina",
+    "P_15": "Ulica (opcjonalnie)",
+    "P_16": "Nr domu",
+    "P_17": "Nr lokalu (opcjonalnie)",
+    "P_18": "Miejscowość",
+    "P_19": "Kod pocztowy",
+    "P_23": "Zwięzłe określenie treści i przedmiotu czynności cywilnoprawnej ( opisujemy samochód, podając takie dane jak: marka i model samochodu, jego rok produkcji, pojemność silnika, numer rejestracyjny, numer nadwozia, przebieg, rodzaj paliwa oraz, jeśli auto takowe ma, uszkodzenia)",
+    "P_26": "Suma sprzedaży"
+}
