@@ -9,7 +9,7 @@
     },
     "P5": {
         "name_em": "Tax office code",
-		"name_pl": "Kod urzędu skarbowego"
+		"name_pl": "Kod urzędu skarbowego",
         "calculated": true,
         "type": "e-pity"
     },
@@ -80,7 +80,7 @@
 
     },
     "P46": {
-		"name_en": "Amount of tax due"
+		"name_en": "Amount of tax due",
         "name_pl": "Kwota należnego podatku",
         "type": "additive",
         "calculated": true,
@@ -89,7 +89,6 @@
     "P53": {
 		"name_en": "Amount of tax due",
         "name_pl": "Kwota należnego podatku",
-        "type": "calculated",
         "type": "additive",
         "calculated": true,
         "variables": ["P46"]
